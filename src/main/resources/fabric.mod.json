@@ -3,13 +3,12 @@
 	"id": "testmod",
 	"version": "${version}",
 	"name": "testMod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Early-game mob farming via statue cores and mob statues.",
 	"authors": [
-		"Me!"
+		"jmalcolmo"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/jmalcolmo/minecraft"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/testmod/icon.png",

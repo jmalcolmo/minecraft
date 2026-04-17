@@ -1,5 +1,6 @@
 package name.modid;
 
+import name.modid.item.StatueCoreItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -10,21 +11,20 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 
 public class ModItems {
-
-    private static final ResourceKey<Item> TEST_FOOD_KEY = ResourceKey.create(
-        Registries.ITEM,
-        Identifier.fromNamespaceAndPath(TestMod.MOD_ID, "test_food")
+    private static final ResourceKey<Item> STATUE_CORE_KEY = ResourceKey.create(
+            Registries.ITEM,
+            Identifier.fromNamespaceAndPath(TestMod.MOD_ID, "statue_core")
     );
 
-    public static final Item TEST_FOOD = Registry.register(
-        BuiltInRegistries.ITEM,
-        TEST_FOOD_KEY,
-        new Item(new Item.Properties().setId(TEST_FOOD_KEY))
+    public static final StatueCoreItem STATUE_CORE = Registry.register(
+            BuiltInRegistries.ITEM,
+            STATUE_CORE_KEY,
+            new StatueCoreItem(new Item.Properties().setId(STATUE_CORE_KEY).stacksTo(1))
     );
 
     public static void initialize() {
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(output -> {
-            output.prepend(TEST_FOOD);
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(output -> {
+            output.accept(STATUE_CORE);
         });
     }
 }
