@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "active=false": { "model": "testmod:block/mob_statue" },
+    "active=true":  { "model": "testmod:block/mob_statue_active" }
+  }
+}

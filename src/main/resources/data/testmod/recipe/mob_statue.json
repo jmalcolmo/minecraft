@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SPS",
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:cobblestone",
+    "P": "minecraft:carved_pumpkin"
+  },
+  "result": {
+    "id": "testmod:mob_statue",
+    "count": 1
+  }
+}
